@@ -7,55 +7,77 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
-## About Laravel
+## ➡️ Requisitos.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+- **PHP** 8.2 ou superior
+- **Composer** 2.8.5 ou superior
+- **Node.js** 20 ou superior
+- **phpMyAdmin** 5.2.1 ou superior
+- **Git** 2.47.1.windows.1 ou superior
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## ➡️ Usando o projeto pela **primeira vez**.
 
-## Learning Laravel
+```shell
+git clone https://github.com/alessandro-araujo/test-fullstack-laravel-zamurak-studio.git .
+```
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+- **[Criando e Configurando Arquivo: .env](#%EF%B8%8F-configura%C3%A7%C3%B5es-do-banco-de-dados-regras-migrate) Crie o arquivo .env de .env-example**
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+* Crie a **chave** (comando que define o valor **APP_KEY** no seu arquivo **.env**).
+```env
+php artisan key:generate
+```
+- **Instale as depêndencias:**
+```shell
+composer install
+```
+- **Executar as migrations**
+* Após configurar o banco, execute:
+```shell
+php artisan migrate
+```
+* Obs: Caso, não tenha um banco, `laravel`, digite sim:
+```shell
+WARN  The database 'laravel' does not exist on the 'mysql' connection.
+Would you like to create it? (yes/no) [yes]
+❯ yes
+```
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+- Cadastre os **Seeders**:
+```shell
+php artisan db:seed
+```
 
-## Laravel Sponsors
+- **Execute o php:**
+```shell
+php artisan serve
+```
+- **Acesse: [http://127.0.0.1:8000/](http://127.0.0.1:8000/)**
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
 
-### Premium Partners
+## ➡️ Configurações do Banco de Dados
+- Crie o arquivo `.env` copiando o arquivo `.env-example`:
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+* Configuração aplicada para o projeto:
+```env
+APP_TIMEZONE=America/Sao_Paulo
+APP_URL=http://127.0.0.1:8000/
+APP_LOCALE=pt_BR
 
-## Contributing
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=laravel
+DB_USERNAME=root
+DB_PASSWORD=
+```
+* **Obs: Atualize os dados de DB_USERNAME e DB_PASSWORD, conforme esta no seu ambiente.**
+* Certifique-se que DB_DATABASE=laravel esteja disponivel (ou o nome que colocou).
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
 
-## Code of Conduct
+- **[Usando o projeto pela primeira vez](#%EF%B8%8F-usando-o-projeto-pela-primeira-vez)**.
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
 
 ## Security Vulnerabilities
 
