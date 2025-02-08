@@ -7,18 +7,8 @@ use Illuminate\Http\Request;
 
 class UserController extends Controller
 {
-    // Exibe a lista de usuários
-    public function index()
-    {
-        $users = User::all();
-        return view('users.index', compact('users'));
-    }
 
-    // Exibe o formulário de criação de usuário
-    public function create()
-    {
-        return view('users.create');
-    }
+
 
     // Processa a criação do usuário
     public function store(Request $request)
