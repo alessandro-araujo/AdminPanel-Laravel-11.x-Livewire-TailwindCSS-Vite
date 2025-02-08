@@ -1,10 +1,6 @@
 <div>
     <livewire:alert />
-    @if (session('error'))
-        <div class="alert alert-danger" role="alert">
-            {{ session('error') }}
-        </div>
-    @endif
+
     <form wire:submit="login">
 
         <label for="email">email:</label>

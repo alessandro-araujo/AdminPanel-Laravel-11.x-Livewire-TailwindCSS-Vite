@@ -18,7 +18,8 @@ class Login extends Component
 
         if(!$authenticated){
             // Erro ao conseguir logar no sistema
-            return back()->withInput()->with('error', 'E-mail ou Senha inválida');
+            return redirect()->route('login')->with('error', 'E-mail ou Senha inválida');
+
         }
         return redirect()->route('user.index')->with('success', 'Usuário criado com sucesso!');
     }

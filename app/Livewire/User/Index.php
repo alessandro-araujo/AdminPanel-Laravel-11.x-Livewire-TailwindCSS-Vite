@@ -11,6 +11,7 @@ class Index extends Component
 {
     public $userName;
     public $users;
+    public $id;
 
     public function mount()
     {
@@ -19,6 +20,16 @@ class Index extends Component
         $this->users = User::all();
     }
 
+    public function delete(User $user)
+    {
+        $user->delete();
+        return redirect()->route('user.index')->with('success', 'Usuário excluído com sucesso!');
+    }
+
+    public function show($id)
+    {
+        return redirect()->route('user.show', ['id' => $id]);
+    }
 
     public function logout()
     {
