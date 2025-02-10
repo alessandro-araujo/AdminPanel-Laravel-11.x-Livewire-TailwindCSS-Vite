@@ -69,6 +69,11 @@ Would you like to create it? (yes/no) [yes]
 ❯ yes
 ```
 
+### Instalando **Packages NPM**
+```shell
+npm install
+```
+
 ### Executando servidor e interface
 - **Execute a interface**
 ```shell
