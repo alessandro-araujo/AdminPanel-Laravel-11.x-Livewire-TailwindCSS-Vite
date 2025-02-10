@@ -13,15 +13,26 @@ class Login extends Component
 
     public function login()
     {
+        $messages = [
+            'email.required' => 'Campo e-mail é obrigatorio',
+            'email.email' => 'Campo deve ser um email valido!',
+            'password.required' => 'Campo senha é obrigatorio',
+        ];
 
-        $authenticated = Auth::attempt(['email' => $this->email, 'password' => $this->password]);
+        // Realiza a validação
+        $validated = $this->validate([
+            'email' => 'required|email',
+            'password' => 'required',
+        ], $messages);
+
+
+        $authenticated = Auth::attempt(['email' => $validated['email'], 'password' => $validated['password']]);
 
         if(!$authenticated){
-            // Erro ao conseguir logar no sistema
             return redirect()->route('login')->with('error', 'E-mail ou Senha inválida');
 
         }
-        return redirect()->route('user.index')->with('success', 'Usuário criado com sucesso!');
+        return redirect()->route('user.index');
     }
     #[Title('Login')]
     public function render()

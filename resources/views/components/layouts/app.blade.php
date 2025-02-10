@@ -5,8 +5,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         <title>{{ $title ?? 'layouts Liveware' }}</title>
+        @vite('resources/css/app.css')
     </head>
-    <body>
+    <body class="relative bg-[#EBEFFF]">
         {{ $slot }}
     </body>
 </html>
