@@ -77,7 +77,7 @@ npm install
 ### Executando servidor e interface
 - **Execute a interface**
 ```shell
-npm dev run
+npm run dev
 ```
 
 - **Execute o php:**
