@@ -6,6 +6,7 @@ use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 use Livewire\Component;
 use Livewire\Attributes\Title;
+#[Title('Sistema - Usuários')]
 
 class Index extends Component
 {
@@ -20,7 +21,7 @@ class Index extends Component
         $this->users = User::all();
     }
 
-    public function delete(User $user)
+    public function destroy(User $user)
     {
         $user->delete();
         return redirect()->route('user.index')->with('success', 'Usuário excluído com sucesso!');
@@ -31,15 +32,6 @@ class Index extends Component
         return redirect()->route('user.show', ['id' => $id]);
     }
 
-    public function logout()
-    {
-        Auth::logout();
-        request()->session()->invalidate();
-        request()->session()->regenerateToken();
-        return redirect()->route('login')->with('success', 'Deslogado com sucesso!');
-    }
-
-    #[Title('Sistema - Table Users')]
     public function render()
     {
         return view('livewire.user.index');
