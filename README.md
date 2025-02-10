@@ -38,8 +38,8 @@ DB_DATABASE=laravel
 DB_USERNAME=root
 DB_PASSWORD=
 ```
-* **Obs: Atualize os dados de DB_USERNAME e DB_PASSWORD, conforme esta no seu ambiente.**
-* Certifique-se que DB_DATABASE=laravel esteja disponivel (ou o nome que colocou).
+* **Obs: Atualize as variaveis (DB_HOST/DB_PORT/DB_USERNAME/DB_PASSWORD), conforme esta no seu ambiente.**
+* Certifique-se que DB_DATABASE=laravel esteja disponivel (ou o nome que configurou).
 
 ### Gerando key
 * Crie a **chave** (comando que define o valor **APP_KEY** no seu arquivo **.env**).
