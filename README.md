@@ -41,16 +41,18 @@ DB_PASSWORD=
 * **Obs: Atualize as variaveis (DB_HOST/DB_PORT/DB_USERNAME/DB_PASSWORD), conforme esta no seu ambiente.**
 * Certifique-se que DB_DATABASE=laravel esteja disponivel (ou o nome que configurou).
 
-### Gerando key
-* Crie a **chave** (comando que define o valor **APP_KEY** no seu arquivo **.env**).
-```env
-php artisan key:generate
-```
 
 ### Instalando depêdencias
 - **Instale as depêndencias:**
 ```shell
 composer install
+```
+
+
+### Gerando key
+* Crie a **chave** (comando que define o valor **APP_KEY** no seu arquivo **.env**).
+```env
+php artisan key:generate
 ```
 
 ### Criando banco de dados
