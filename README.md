@@ -17,7 +17,7 @@
 
 
 ## ➡️ Usando o projeto pela **primeira vez**.
-### Clone o repositório
+### Clone o repositório em uma pasta vazia
 
 ```shell
 git clone https://github.com/alessandro-araujo/AdminPanel-Laravel-11.x-Livewire-TailwindCSS-Vite.git .
