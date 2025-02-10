@@ -85,6 +85,7 @@ npm run dev
 php artisan serve
 ```
 - **Acesse: [http://127.0.0.1:8000/](http://127.0.0.1:8000/)**
+- **Entre no sistema e crie seu cadastro.**
 
 
 ## Security Vulnerabilities
