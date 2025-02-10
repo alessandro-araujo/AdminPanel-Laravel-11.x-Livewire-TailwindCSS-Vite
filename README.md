@@ -15,6 +15,7 @@
 - **phpMyAdmin** 5.2.1 ou superior
 - **Git** 2.47.1.windows.1 ou superior
 
+* Obs: Não use o **PowerShell**
 
 ## ➡️ Usando o projeto pela **primeira vez**.
 ### Clone o repositório em uma pasta vazia
