@@ -17,48 +17,14 @@
 
 
 ## ➡️ Usando o projeto pela **primeira vez**.
+### Clone o repositório
 
 ```shell
-git clone https://github.com/alessandro-araujo/test-fullstack-laravel-zamurak-studio.git .
+git clone https://github.com/alessandro-araujo/AdminPanel-Laravel-11.x-Livewire-TailwindCSS-Vite.git .
 ```
 
-- **[Criando e Configurando Arquivo: .env](#%EF%B8%8F-configura%C3%A7%C3%B5es-do-banco-de-dados-regras-migrate) Crie o arquivo .env de .env-example**
-
-* Crie a **chave** (comando que define o valor **APP_KEY** no seu arquivo **.env**).
-```env
-php artisan key:generate
-```
-- **Instale as depêndencias:**
-```shell
-composer install
-```
-- **Executar as migrations**
-* Após configurar o banco, execute:
-```shell
-php artisan migrate
-```
-* Obs: Caso, não tenha um banco, `laravel`, digite sim:
-```shell
-WARN  The database 'laravel' does not exist on the 'mysql' connection.
-Would you like to create it? (yes/no) [yes]
-❯ yes
-```
-
-- Cadastre os **Seeders**:
-```shell
-php artisan db:seed
-```
-
-- **Execute o php:**
-```shell
-php artisan serve
-```
-- **Acesse: [http://127.0.0.1:8000/](http://127.0.0.1:8000/)**
-
-
-## ➡️ Configurações do Banco de Dados
-- Crie o arquivo `.env` copiando o arquivo `.env-example`:
-
+### Configure arquivo **.env**
+- **Crie o arquivo `.env` copiando o arquivo `.env-example`:**
 * Configuração aplicada para o projeto:
 ```env
 APP_TIMEZONE=America/Sao_Paulo
@@ -75,8 +41,42 @@ DB_PASSWORD=
 * **Obs: Atualize os dados de DB_USERNAME e DB_PASSWORD, conforme esta no seu ambiente.**
 * Certifique-se que DB_DATABASE=laravel esteja disponivel (ou o nome que colocou).
 
+### Gerando key
+* Crie a **chave** (comando que define o valor **APP_KEY** no seu arquivo **.env**).
+```env
+php artisan key:generate
+```
 
-- **[Usando o projeto pela primeira vez](#%EF%B8%8F-usando-o-projeto-pela-primeira-vez)**.
+### Instalando depêdencias
+- **Instale as depêndencias:**
+```shell
+composer install
+```
+
+### Criando banco de dados
+- **Executar as migrations**
+* Após configurar o banco, execute:
+```shell
+php artisan migrate
+```
+* Obs: Caso, não tenha um banco, `laravel`, digite sim:
+```shell
+WARN  The database 'laravel' does not exist on the 'mysql' connection.
+Would you like to create it? (yes/no) [yes]
+❯ yes
+```
+
+### Executando servidor e interface
+- **Execute a interface**
+```shell
+npm dev run
+```
+
+- **Execute o php:**
+```shell
+php artisan serve
+```
+- **Acesse: [http://127.0.0.1:8000/](http://127.0.0.1:8000/)**
 
 
 ## Security Vulnerabilities
