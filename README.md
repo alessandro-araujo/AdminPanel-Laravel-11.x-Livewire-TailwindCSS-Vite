@@ -58,7 +58,7 @@ php artisan key:generate
 
 ### Criando banco de dados
 - **Executar as migrations**
-* Após configurar o banco, execute:
+* Após configurar o .env, execute:
 ```shell
 php artisan migrate
 ```
